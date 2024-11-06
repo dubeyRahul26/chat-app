@@ -25,7 +25,7 @@ export const signup = async (req, res) => {
     // const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;
     // const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
 
-    const boyProfilePic = "https://api.dicebear.com/9.x/dylan/svg?seed=Alexander";
+    const boyProfilePic = "https://api.dicebear.com/9.x/dylan/svg?seed=Alexander&backgroundColor=ffdfbf&hairColor=0e0e0e";
     const girlProfilePic = "https://api.dicebear.com/9.x/dylan/svg?backgroundRotation=0,360";
 
     const newUser = new User({

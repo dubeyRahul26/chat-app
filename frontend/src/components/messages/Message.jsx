@@ -26,14 +26,15 @@ const Message = ({ message }) => {
             />
           </div>
         </div>
-        <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass}`}>
+        <div
+          className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass}`}
+        >
           {message.message}
         </div>
         <div className="chat-footer opacity-75 text-xs flex gap-1 items-center text-white">
-          {formattedTime} 
+          {formattedTime}
           {fromMe && <div className="text-white"> &nbsp;You</div>}
         </div>
-        
       </div>
     </div>
   );
