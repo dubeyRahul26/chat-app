@@ -1,5 +1,4 @@
-import { FaArrowCircleLeft } from "react-icons/fa"; 
-import { BiArrowBack } from "react-icons/bi"; 
+import { FaArrowCircleLeft } from "react-icons/fa";
 import Messages from "./Messages";
 import MessageInput from "./MessageInput";
 import { TiMessages } from "react-icons/ti";
@@ -14,9 +13,9 @@ const MessageContainer = () => {
   //   return () => setSelectedConversation(null);
   // }, []);
 
-  const handleClick = () =>{
-      setSelectedConversation(null);
-  }
+  const handleClick = () => {
+    setSelectedConversation(null);
+  };
 
   return (
     <div className="md:min-w-[450px] min-h-96 flex flex-col ">
@@ -26,7 +25,11 @@ const MessageContainer = () => {
         <>
           {/* Header of Message Container */}
           <div className="bg-slate-500 px-4 py-2 mb-2 flex items-center justify-start gap-3">
-            <span className="flex justify-center items-center pt-1"><button className=" hover:text-white" onClick={handleClick}><FaArrowCircleLeft /></button></span>
+            <span className="flex justify-center items-center pt-1">
+              <button className=" hover:text-white" onClick={handleClick}>
+                <FaArrowCircleLeft />
+              </button>
+            </span>
             <span className="label-text text-white text-base">To : </span>{" "}
             <span className="text-gray-900 font-bold">
               {selectedConversation.fullName}
@@ -45,7 +48,7 @@ const MessageContainer = () => {
 export default MessageContainer;
 
 const NoChatSelected = () => {
-  const {authUser} = useAuthContext() ;
+  const { authUser } = useAuthContext();
   return (
     <div className="flex items-center justify-center w-full h-full">
       <div className="px-4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2">
