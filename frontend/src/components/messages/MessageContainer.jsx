@@ -1,3 +1,5 @@
+import { FaArrowCircleLeft } from "react-icons/fa"; 
+import { BiArrowBack } from "react-icons/bi"; 
 import Messages from "./Messages";
 import MessageInput from "./MessageInput";
 import { TiMessages } from "react-icons/ti";
@@ -8,9 +10,13 @@ import { useAuthContext } from "../../context/AuthContext";
 const MessageContainer = () => {
   const { selectedConversation, setSelectedConversation } = useConverstaion();
 
-  useEffect(() => {
-    return () => setSelectedConversation(null);
-  }, [setSelectedConversation]);
+  // useEffect(() => {
+  //   return () => setSelectedConversation(null);
+  // }, []);
+
+  const handleClick = () =>{
+      setSelectedConversation(null);
+  }
 
   return (
     <div className="md:min-w-[450px] flex flex-col ">
@@ -19,7 +25,8 @@ const MessageContainer = () => {
       ) : (
         <>
           {/* Header of Message Container */}
-          <div className="bg-slate-500 px-4 py-2 mb-2">
+          <div className="bg-slate-500 px-4 py-2 mb-2 flex items-center justify-start gap-3">
+            <span className="flex justify-center items-center pt-1"><button className=" hover:text-white" onClick={handleClick}><FaArrowCircleLeft /></button></span>
             <span className="label-text text-white text-base">To : </span>{" "}
             <span className="text-gray-900 font-bold">
               {selectedConversation.fullName}
