@@ -27,7 +27,7 @@ const MessageContainer = () => {
           <div className="bg-slate-500 px-4 py-2 mb-2 flex items-center justify-start gap-3">
             <span className="flex justify-center items-center pt-1">
               <button className=" hover:text-white" onClick={handleClick}>
-                <FaArrowCircleLeft />
+                <FaArrowCircleLeft style={{ color: 'white', fontSize: 25 }}/>
               </button>
             </span>
             <span className="label-text text-white text-base">To : </span>{" "}
