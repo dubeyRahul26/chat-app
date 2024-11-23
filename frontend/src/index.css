@@ -4,10 +4,10 @@
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/bg1.png");
+    url("/bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center ;
   background-attachment: fixed;
 }
 
